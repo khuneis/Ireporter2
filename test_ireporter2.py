@@ -18,19 +18,33 @@ class ireporterTestCase(unittest.TestCase):
             # create all tables
             db.create_all()
 
+<<<<<<< HEAD
     def test_ireporters_creation(self):
+=======
+    def test_ireporter_creation(self):
+       
+>>>>>>> 8faf1f06d2757cd848f7a089ad5d166810f65d09
         res = self.client().post('/api/v1/Ireporter2/', data=self.ireporter)
         self.assertEqual(res.status_code, 201)
         self.assertIn('Go to Borabora', str(res.data))
 
+<<<<<<< HEAD
     def test_api_can_get_all_ireporters(self):
+=======
+    def test_api_can_get_all_ireporter(self):
+       
+>>>>>>> 8faf1f06d2757cd848f7a089ad5d166810f65d09
         res = self.client().post('/api/v1/Ireporter2/', data=self.ireporter)
         self.assertEqual(res.status_code, 201)
         res = self.client().get('/api/v1/Ireporter2/')
         self.assertEqual(res.status_code, 200)
         self.assertIn('Go to Borabora', str(res.data))
 
+<<<<<<< HEAD
     def test_api_can_get_ireporters_by_id(self):
+=======
+    def test_api_can_get_ireporter_by_id(self):
+>>>>>>> 8faf1f06d2757cd848f7a089ad5d166810f65d09
         """Test API can get a single ireporter by using it's id."""
         rv = self.client().post('/api/v1/Ireporter2/', data=self.ireporter)
         self.assertEqual(rv.status_code, 201)
@@ -40,7 +54,11 @@ class ireporterTestCase(unittest.TestCase):
         self.assertEqual(result.status_code, 200)
         self.assertIn('Go to Borabora', str(result.data))
 
+<<<<<<< HEAD
     def test_ireporters_can_be_edited(self):
+=======
+    def test_ireporter_can_be_edited(self):
+>>>>>>> 8faf1f06d2757cd848f7a089ad5d166810f65d09
         """Test API can edit an existing ireporter. (PUT request)"""
         rv = self.client().post(
             '/api/v1/Ireporter2/',
@@ -55,7 +73,11 @@ class ireporterTestCase(unittest.TestCase):
         results = self.client().get('/api/v1/Ireporter2/1')
         self.assertIn('Dont just eat', str(results.data))
 
+<<<<<<< HEAD
     def test_ireporters_deletion(self):
+=======
+    def test_ireporter_deletion(self):
+>>>>>>> 8faf1f06d2757cd848f7a089ad5d166810f65d09
         """Test API can delete an existing ireporter. (DELETE request)."""
         rv = self.client().post(
             '/api/v1/Ireporter2/',
